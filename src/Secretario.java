@@ -6,6 +6,11 @@ public class Secretario extends Pessoa{
 
 
     @Override
+    public double salario() {
+        return 4000;
+    }
+
+    @Override
     public String toString() {
         return "Secretario{" +
                 "registro='" + registro + '\'' +

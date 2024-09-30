@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected int idade;
     protected String dataNascimento;
@@ -11,7 +11,7 @@ public class Pessoa {
     protected String nomeMae;
 
 
-
+    public abstract double salario();
 
 
     public boolean pessoaMaiorIdade(){

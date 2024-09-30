@@ -5,6 +5,11 @@ public class Diretor extends Pessoa{
 
 
     @Override
+    public double salario() {
+        return 5000 * 5;
+    }
+
+    @Override
     public String toString() {
         return "Diretor{" +
                 "registroEducacao='" + registroEducacao + '\'' +

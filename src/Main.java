@@ -17,6 +17,7 @@ public class Main {
         secretario.setExperiencia("Administração");
         secretario.setCPF("999.999.999-00");
         secretario.setIdade(21);
+        secretario.setNome("Beltrano");
 
 
 
@@ -30,5 +31,19 @@ public class Main {
         System.out.println(secretario.pessoaMaiorIdade());
 
 
+        System.out.println("O salario do aluno é" + aluno.salario());
+        System.out.println("O salario do diretor é" + diretor.salario());
+        System.out.println("O salario do secretario é" + secretario.salario());
+
+
+        teste(aluno);
+        teste(diretor);
+        teste(secretario);
+
+
     }
+    public static void teste(Pessoa pessoa){
+        System.out.println("Pessoa é "+ pessoa.getNome() + " e recebe " + pessoa.salario());
+    }
+
 }

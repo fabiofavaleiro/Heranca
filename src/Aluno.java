@@ -6,8 +6,13 @@ public class Aluno extends Pessoa{
 
 
     @Override
+    public double salario() {
+        return 5000;
+    }
+
+    @Override
     public boolean pessoaMaiorIdade() {
-        return super.pessoaMaiorIdade();
+        return idade>=16;
     }
 
     @Override
