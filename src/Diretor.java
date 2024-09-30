@@ -13,6 +13,9 @@ public class Diretor extends Pessoa{
                 '}';
     }
 
+
+
+
     public String getRegistroEducacao() {
         return registroEducacao;
     }

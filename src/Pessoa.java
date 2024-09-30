@@ -2,14 +2,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pessoa {
-    private String nome;
-    private int idade;
-    private String dataNascimento;
-    private String registroGeral;
-    private String cPF;
-    private String nomePai;
-    private String nomeMae;
-    List <Disciplina> disciplinas = new ArrayList<Disciplina>();
+    protected String nome;
+    protected int idade;
+    protected String dataNascimento;
+    protected String registroGeral;
+    protected String cPF;
+    protected String nomePai;
+    protected String nomeMae;
+
+
+
+
+
+    public boolean pessoaMaiorIdade(){
+        return idade >= 18;
+    }
+
+
 
 
     @Override
@@ -22,7 +31,6 @@ public class Pessoa {
                 ", cPF='" + cPF + '\'' +
                 ", nomePai='" + nomePai + '\'' +
                 ", nomeMae='" + nomeMae + '\'' +
-                ", disciplinas=" + disciplinas +
                 '}';
     }
 
@@ -58,11 +66,11 @@ public class Pessoa {
         this.registroGeral = registroGeral;
     }
 
-    public String getcPF() {
+    public String getCPF() {
         return cPF;
     }
 
-    public void setcPF(String cPF) {
+    public void setCPF(String cPF) {
         this.cPF = cPF;
     }
 
@@ -82,11 +90,5 @@ public class Pessoa {
         this.nomeMae = nomeMae;
     }
 
-    public List<Disciplina> getDisciplinas() {
-        return disciplinas;
-    }
 
-    public void setDisciplinas(List<Disciplina> disciplinas) {
-        this.disciplinas = disciplinas;
-    }
 }
