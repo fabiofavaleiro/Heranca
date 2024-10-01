@@ -2,10 +2,14 @@ import escola.interfaces.PermitirAcesso;
 
 public class FuncaoAutenticacao {
 
-    public boolean autenticarCurso(PermitirAcesso acesso){
+    private PermitirAcesso permitirAcesso;
 
+    public boolean autenticar(){
+        return permitirAcesso.autenticar();
+    }
 
-        return acesso.autenticar();
+    public  FuncaoAutenticacao(PermitirAcesso acesso){
+        permitirAcesso = acesso;
     }
 
 

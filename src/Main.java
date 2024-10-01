@@ -11,12 +11,12 @@ public class Main {
         String login = JOptionPane.showInputDialog("Qual é o login?");
         String senha = JOptionPane.showInputDialog("Qual é a senha?");
 
-        FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
-
-        PermitirAcesso permitirAcesso = new Secretario(login, senha);
 
 
-        if(autenticacao.autenticarCurso(permitirAcesso)){
+
+
+
+        if(new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()){
 
             JOptionPane.showMessageDialog(null,"Entrou!!!");
 
