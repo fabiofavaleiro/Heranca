@@ -1,6 +1,31 @@
+import javax.swing.*;
+
+
+
+
 
 public class Main {
     public static void main(String[] args) {
+
+
+        Secretario secretario = new Secretario();
+        secretario.setExperiencia("Administração");
+        secretario.setCPF("999.999.999-00");
+        secretario.setIdade(21);
+        secretario.setNome("Beltrano");
+        secretario.setLogin("");
+
+
+        String login = JOptionPane.showInputDialog("Qual é o login?");
+        String senha = JOptionPane.showInputDialog("Qual é a senha?");
+        secretario.setLogin(login);
+        secretario.setSenha(senha);
+
+        if(secretario.autenticar()){
+
+
+
+
 
         Aluno aluno = new Aluno();
         aluno.setNome("Fulano");
@@ -11,14 +36,6 @@ public class Main {
         diretor.setRegistroGeral("98798456");
         diretor.setNome("Cicrano");
         diretor.setIdade(55);
-
-
-        Secretario secretario = new Secretario();
-        secretario.setExperiencia("Administração");
-        secretario.setCPF("999.999.999-00");
-        secretario.setIdade(21);
-        secretario.setNome("Beltrano");
-
 
 
         System.out.println(aluno);
@@ -39,11 +56,16 @@ public class Main {
         teste(aluno);
         teste(diretor);
         teste(secretario);
-
+}else {
+            JOptionPane.showMessageDialog(null,"Acesso Negado!!!");
+        }
 
     }
+
     public static void teste(Pessoa pessoa){
         System.out.println("Pessoa é "+ pessoa.getNome() + " e recebe " + pessoa.salario());
     }
+
+
 
 }

@@ -1,46 +1,89 @@
-public class Secretario extends Pessoa{
+import escola.interfaces.PermitirAcesso;
+
+public class Secretario extends Pessoa implements PermitirAcesso {
 
     private String registro;
     private String nivelCargo;
     private String experiencia;
 
+    private String login;
+    private String senha;
 
-    @Override
-    public double salario() {
-        return 4000;
+
+
+
+
+
+
+    public void Secretario(){    }
+
+
+
+
+
+    public Secretario() {
     }
 
-    @Override
-    public String toString() {
-        return "Secretario{" +
-                "registro='" + registro + '\'' +
-                ", nivelCargo='" + nivelCargo + '\'' +
-                ", experiencia='" + experiencia + '\'' +
-                '}';
+
+
+        @Override
+        public boolean autenticar(){
+           return login.equals("Admin") && senha.equals("Admin");
+
+        }
+
+
+        @Override
+        public double salario() {
+            return 4000;
+        }
+
+        @Override
+        public String toString() {
+            return "Secretario{" +
+                    "registro='" + registro + '\'' +
+                    ", nivelCargo='" + nivelCargo + '\'' +
+                    ", experiencia='" + experiencia + '\'' +
+                    '}';
+        }
+
+        public String getRegistro() {
+            return registro;
+        }
+
+        public void setRegistro(String registro) {
+            this.registro = registro;
+        }
+
+        public String getNivelCargo() {
+            return nivelCargo;
+        }
+
+        public void setNivelCargo(String nivelCargo) {
+            this.nivelCargo = nivelCargo;
+        }
+
+        public String getExperiencia() {
+            return experiencia;
+        }
+
+        public void setExperiencia(String experiencia) {
+            this.experiencia = experiencia;
+        }
+
+    public String getLogin() {
+        return login;
     }
 
-    public String getRegistro() {
-        return registro;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public void setRegistro(String registro) {
-        this.registro = registro;
+    public String getSenha() {
+        return senha;
     }
 
-    public String getNivelCargo() {
-        return nivelCargo;
-    }
-
-    public void setNivelCargo(String nivelCargo) {
-        this.nivelCargo = nivelCargo;
-    }
-
-    public String getExperiencia() {
-        return experiencia;
-    }
-
-    public void setExperiencia(String experiencia) {
-        this.experiencia = experiencia;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }
-
