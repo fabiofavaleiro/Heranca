@@ -24,7 +24,7 @@ public class Matrix {
                     for (int i4 = 0; i4 < 6; i4++) {
                         for (int i5 = 0; i5 < 6; i5++) {
                             for (int i6 = 0; i6 < 6; i6++) {
-                                JOptionPane.showInternalMessageDialog( null,matrix[i1][i2][i3][i4][i5][i6]);
+                                System.out.println( matrix[i1][i2][i3][i4][i5][i6]);
                             }
                         }
                     }
