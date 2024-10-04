@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Disciplina {
     private String nomeDisciplina;
     private double[] notaDisciplina = new double[3];
@@ -8,6 +6,7 @@ public class Disciplina {
 
     public double mediaNotas(double notas[]){
         double somaNotas = 0;
+        notaDisciplina = notas;
         for (int i = 0; i < notaDisciplina.length; i++) {
 
             somaNotas += notaDisciplina[i];
@@ -34,11 +33,6 @@ public class Disciplina {
         this.notaDisciplina = notaDisciplina;
     }
 
-    @Override
-    public String toString() {
-        return "Disciplina{" +
-                "nomeDisciplina='" + nomeDisciplina + '\'' +
-                ", notaDisciplina=" + Arrays.toString(notaDisciplina) +
-                '}';
-    }
+
+
 }
