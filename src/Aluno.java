@@ -1,8 +1,15 @@
+import java.util.Arrays;
+
 public class Aluno extends Pessoa{
     private String dataMatricula;
     private String nomeEscola;
     private String serieMatriculado;
-    private String diciplinas;
+
+
+    private  Disciplina[] disciplina = new Disciplina[3];
+
+
+
 
 
     @Override
@@ -13,23 +20,6 @@ public class Aluno extends Pessoa{
     @Override
     public boolean pessoaMaiorIdade() {
         return idade>=16;
-    }
-
-    @Override
-    public String toString() {
-        return "Aluno{" +
-                "dataMatricula='" + dataMatricula + '\'' +
-                ", nomeEscola='" + nomeEscola + '\'' +
-                ", serieMatriculado='" + serieMatriculado + '\'' +
-                ", diciplinas='" + diciplinas + '\'' +
-                ", nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", dataNascimento='" + dataNascimento + '\'' +
-                ", registroGeral='" + registroGeral + '\'' +
-                ", cPF='" + cPF + '\'' +
-                ", nomePai='" + nomePai + '\'' +
-                ", nomeMae='" + nomeMae + '\'' +
-                '}';
     }
 
     public String getDataMatricula() {
@@ -56,15 +46,30 @@ public class Aluno extends Pessoa{
         this.serieMatriculado = serieMatriculado;
     }
 
-    public String getDiciplinas() {
-        return diciplinas;
+    public Disciplina[] getDisciplina() {
+        return disciplina;
     }
 
-    public void setDiciplinas(String diciplinas) {
-        this.diciplinas = diciplinas;
+    public void setDisciplina(Disciplina[] disciplina) {
+        this.disciplina = disciplina;
     }
 
-
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "dataMatricula='" + dataMatricula + '\'' +
+                ", nomeEscola='" + nomeEscola + '\'' +
+                ", serieMatriculado='" + serieMatriculado + '\'' +
+                ", disciplina=" + Arrays.toString(disciplina) +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", registroGeral='" + registroGeral + '\'' +
+                ", cPF='" + cPF + '\'' +
+                ", nomePai='" + nomePai + '\'' +
+                ", nomeMae='" + nomeMae + '\'' +
+                '}';
+    }
 }
 
 
